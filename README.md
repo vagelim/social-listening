@@ -81,3 +81,28 @@ Once your Dagster Daemon is running, you can start turning on schedules and sens
 The easiest way to deploy your Dagster project is to use Dagster Cloud.
 
 Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn more.
+
+## Instagram Integration
+
+The social listening project now includes Instagram integration to track brand mentions and tagged media. To set up the Instagram integration, you'll need to configure the following environment variables:
+
+- `INSTAGRAM_ACCESS_TOKEN`: Your Instagram Graph API access token
+- `INSTAGRAM_USER_ID`: Your Instagram business account ID
+- `BRAND_NAME`: The name of your brand to track
+- `SLACK_CHANNEL`: The Slack channel where notifications will be sent
+
+To use the Instagram integration, ensure that you have the necessary permissions and have set up an Instagram Developer account with access to the Graph API.
+
+## Twitter Integration
+
+Twitter integration has been added to track brand mentions on the platform. To set up the Twitter integration, configure these environment variables:
+
+- `TWITTER_API_KEY`: Your Twitter API key
+- `TWITTER_API_SECRET_KEY`: Your Twitter API secret key
+- `TWITTER_BEARER_TOKEN`: Your Twitter API bearer token
+- `BRAND_NAME`: The name of your brand to track
+- `SLACK_CHANNEL`: The Slack channel where notifications will be sent
+
+Make sure you have a Twitter Developer account and have created an application to obtain the necessary API credentials.
+
+Both Instagram and Twitter integrations use the Dagster asset framework and will send notifications to the specified Slack channel when brand mentions are detected.
